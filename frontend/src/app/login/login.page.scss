@@ -1,0 +1,47 @@
+.login-title {
+    position: fixed;
+    top: 10px;
+    margin-top: 180px;
+    font-size: 70px;
+    font-family: sans-serif;
+    left: calc(50% - 200px);
+}
+
+@media screen and (min-width: 1024px){
+    .login-content {
+        width: 600px;
+        max-width: 100%;
+        overflow: hidden;
+        height: 300px;
+        max-height: 100%;
+        position: relative;
+        top: 50%;
+        left: 50%;
+    }
+    
+    .login-box {
+        top: 200px;
+        position: relative;
+        left: -300px;
+    }
+       
+}
+
+@media screen and (max-width: 1024px){
+    .login-title {
+        font-size: 60px;
+        left: calc(50% - 170px);
+    }
+
+    .login-content {
+        width: 100vw;
+        overflow: hidden;
+        height: 300px;
+        position: relative;
+    }
+    
+    .login-box {
+        top: 370px;;
+        position: relative;
+    }    
+}

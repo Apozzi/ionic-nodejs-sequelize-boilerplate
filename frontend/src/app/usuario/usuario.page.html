@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Usuário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let usuario of usuarios">
+    <ion-item>
+      <ion-icon name="person-circle-outline" slot="start"></ion-icon>      
+      <ion-label>{{usuario.nome}}</ion-label>
+      <ion-button color="primary" shape="round" fill="outline" size="small" [routerLink]="['/Usuario/Edit/'+usuario.id]" routerDirection="root">
+        <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+      </ion-button>
+      <ion-button color="danger" shape="round" fill="outline" size="small" (click)="del(usuario)">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-button>
+    </ion-item>
+  
+    <ion-card-content>
+      username: {{usuario.username}}
+    </ion-card-content>
+  </ion-card>
+    
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">    
+    <ion-fab-button [routerLink]="['/Usuario/Edit/0']" routerDirection="root"><ion-icon name="person-add-outline"></ion-icon></ion-fab-button>
+  </ion-fab>
+</ion-content>

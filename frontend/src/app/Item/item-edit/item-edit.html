@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>    
+    <ion-title>Novo Item</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div>
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input [(ngModel)]="item.nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Descrição</ion-label>
+      <ion-input [(ngModel)]="item.descricao"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Código de barras</ion-label>
+      <ion-input [(ngModel)]="item.codigodebarras"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Area</ion-label>
+      <ion-select [(ngModel)]="areaSelecionado">
+        <ion-select-option [value]="area" *ngFor="let area of listaArea">{{area.nome}}</ion-select-option>        
+      </ion-select>
+    </ion-item>    
+    <ion-item>
+      <ion-label position="floating">Categoria</ion-label>
+      <ion-input [(ngModel)]="item.categoria"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Quantidade</ion-label>
+      <ion-input type="number" [(ngModel)]="item.quantidade"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Observação</ion-label>
+      <ion-textarea [(ngModel)]="item.obs"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Data de Cadastro</ion-label>
+      <ion-datetime [(ngModel)]="item.cadastro"  value="2019-10-01T15:43:40.394Z" display-timezone="utc"></ion-datetime>
+    </ion-item>
+    <ion-button expand="full" (click)="save()">Salvar</ion-button>
+    <ion-button expand="full" color="light" [routerLink]="['/Item']" routerDirection="root">Cancelar</ion-button>
+  </div>
+</ion-content>
+  

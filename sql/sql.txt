@@ -1,0 +1,34 @@
+create table Items (
+  id SERIAL primary key not null,
+  nome varchar(255) not null,
+  descricao varchar(255) not null,
+  codigoDeBarras varchar(255) not null,
+  deposito varchar(255) not null,
+  categoria varchar(255) not null,
+  quantidade int,
+  obs varchar(255) not null,
+  cadastro TIMESTAMP
+);
+
+create table Depositos (
+  id SERIAL primary key not null,
+  nome varchar(255) not null,
+  descricao varchar(255) not null,
+  usuario varchar(255),
+  idusuario int
+);
+
+create table Areas (
+  id SERIAL primary key not null,
+  nome varchar(255) not null,
+  descricao varchar(255) not null,
+  deposito varchar(255),
+  iddeposito int
+);
+
+create table Usuarios (
+  id SERIAL primary key not null,
+  nome varchar(255) not null,
+  username varchar(255) not null,
+  senha varchar(255) not null,	
+);

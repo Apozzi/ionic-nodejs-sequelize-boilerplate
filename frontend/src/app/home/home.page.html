@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button [routerLink]="['/Item']" routerDirection="root" color="medium" size="large" expand="full" fill="solid">
+    <ion-icon slot="start" name="pricetag"></ion-icon>
+    Item
+  </ion-button>
+  <ion-button [routerLink]="['/Deposito']" routerDirection="root" color="medium" size="large" expand="full" fill="solid">
+    <ion-icon slot="start" name="cube"></ion-icon>
+    Depósito
+  </ion-button>
+  <ion-button [routerLink]="['/Area']" routerDirection="root" color="medium" size="large" expand="full" fill="solid">
+    <ion-icon slot="start" name="map"></ion-icon>
+    Area
+  </ion-button>
+  <ion-button [routerLink]="['/Usuario']" routerDirection="root" color="medium" size="large" expand="full" fill="solid">
+    <ion-icon slot="start" name="person"></ion-icon>
+    Usuário
+  </ion-button>
+  <ion-button [routerLink]="['/Sobre']" routerDirection="root" color="medium" size="large" expand="full" fill="solid">
+    <ion-icon slot="start" name="information-circle"></ion-icon>
+    Sobre
+  </ion-button>
+</ion-content>
