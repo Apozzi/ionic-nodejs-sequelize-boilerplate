@@ -22,7 +22,7 @@ https://deposito.docs.apiary.io
 
 ## CONFIGURANDO O BANCO DE DADOS
 
-1 - Fazer download do postgres e rodar ele... ao instalar utilize a senha 12345678.
+1 - Fazer download do postgres e rodar ele.. ao instalar utilize a senha 12345678.
 
 2 - Criar uma database nomeada "depositoFurb".
 
